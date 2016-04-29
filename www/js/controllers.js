@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
   
-.controller('welcomeCtrl', function($scope,$cordovaCamera) {
+.controller('welcomeCtrl', function($scope,$cordovaCamera,$cordovaDevice) {
      $scope.ready = false;
      
  document.addEventListener('deviceready', function () {
