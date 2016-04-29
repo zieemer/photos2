@@ -1,0 +1,27 @@
+<ion-view title="Welcome" id="page3">
+    <ion-content padding="true" class=" manual-remove-top-padding has-header">
+        <div class="list card">
+            <div class="item item-divider">Card</div>
+            <div class="item item-body">
+                <div data-ng-show="srcImage">
+                    <img ng-src="{{srcImage || 'img/dummy.jpg'}}" id="srcImage" width="250 " height="250" style="display: block; margin: 0 auto;"/>
+                </div>
+                <div data-ng-hide="srcImage" style="margin: 0px; line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+                    <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+                </div>
+                <button id="welcome-button24" ng-click="takeImage()" class="button button-positive  button-block">Take Picture</button>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Log Info</div>
+            <div class="item item-body">
+                <ion-list>
+                    <ion-item>{{ready}}</ion-item>
+                    <ion-item ng-repeat="info in device" >{{info}}</ion-item>
+                    <ion-item>Item 3</ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="spacer" style="height: 100px;"></div>
+    </ion-content>
+</ion-view>
